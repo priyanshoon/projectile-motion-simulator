@@ -2,4 +2,4 @@
 
 Simple made in C programming language projectile motion simulator.
 
-__NOTE: This Project is still under development__
+__NOTE: This project is still under development__
