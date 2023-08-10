@@ -1,24 +1,30 @@
+#define RAYGUI_IMPLEMENTATION
 #include <stdio.h>
 #include <stdlib.h>
 #include <raylib.h>
-
+#include "raygui.h"
 
 int main(void) {
-    const int screenWidth = 1400;
-    const int screenHeight = 800;
+  const int screenWidth = 900;
+  const int screenHeight = 500;
+  int height = 100;
 
-    InitWindow(screenWidth, screenHeight, "Projectile Motion Simulator");
+  InitWindow(screenWidth, screenHeight, "Projectile Motion Simulator");
 
-    SetTargetFPS(60);
+  SetTargetFPS(60);
 
-    while (!WindowShouldClose()) {
-        BeginDrawing();
-            ClearBackground(RAYWHITE);
-            DrawText("Projectile Motion Simulator", 555, 0, 25, BLACK);
-        EndDrawing();
-    }
+  while (!WindowShouldClose()) {
+    BeginDrawing();
+    ClearBackground(BLACK);
+    DrawText("Projectile Motion Simulator", 100, 10, 25, WHITE);
+    DrawLine(590, 0, 590, GetScreenHeight(), Fade(LIGHTGRAY, 0.6f));
+    DrawRectangle(590, 0, GetScreenWidth() - 500, GetScreenHeight(), Fade(DARKGRAY, 0.3f));
+    GuiSliderBar((Rectangle){ 700, 40, 130, 20 }, "Height", NULL, 0, -400, 400);
+    GuiSliderBar((Rectangle){ 700, 70, 130, 20 }, "Initial Speed", NULL, 0, -400, 400);
+    EndDrawing();
+  }
 
-    CloseWindow();
+  CloseWindow();
 
-    return 0;
+  return 0;
 }
