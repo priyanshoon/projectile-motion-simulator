@@ -19,7 +19,7 @@ int main(void) {
     DrawText("Projectile Motion Simulator", 100, 10, 25, WHITE);
     DrawLine(590, 0, 590, GetScreenHeight(), Fade(LIGHTGRAY, 0.6f));
     DrawRectangle(590, 0, GetScreenWidth() - 500, GetScreenHeight(), Fade(DARKGRAY, 0.3f));
-    GuiSliderBar((Rectangle){ 700, 40, 130, 20 }, "Height", NULL, 0, -400, 400);
+    GuiSliderBar((Rectangle){ 700, 40, 130, 20 }, "Height", NULL, 100, -400, 400);
     GuiSliderBar((Rectangle){ 700, 70, 130, 20 }, "Initial Speed", NULL, 0, -400, 400);
     EndDrawing();
   }

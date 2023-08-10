@@ -1,0 +1,6 @@
+some points to keep in mind -
+1) Range of the trejectory
+2) Max height of the trajectory
+3) Total time taken
+4) Height of launcher
+5) Angle of launcher
