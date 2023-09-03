@@ -21,6 +21,8 @@ int main(void) {
     DrawRectangle(590, 0, GetScreenWidth() - 500, GetScreenHeight(), Fade(DARKGRAY, 0.3f));
     GuiSliderBar((Rectangle){ 700, 40, 130, 20 }, "Height", NULL, 100, -400, 400);
     GuiSliderBar((Rectangle){ 700, 70, 130, 20 }, "Initial Speed", NULL, 0, -400, 400);
+    GuiSliderBar((Rectangle){ 700, 100, 130, 20 }, "Range", NULL, 100, -400, 400);
+    GuiButton( (Rectangle){ 700, 150, 130, 40 }, "Launch" );
     EndDrawing();
   }
 
