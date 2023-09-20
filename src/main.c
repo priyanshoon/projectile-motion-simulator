@@ -12,8 +12,9 @@ int main(void) {
 
     InitWindow(screenWidth, screenHeight, "Projectile Motion Simulator");
 
-    int height = 100;
-    float startAngle = 400.0f;
+    float height = 0.0;
+    float speed = 0.0;
+    float startAngle = 0.0;
 
     SetTargetFPS(60);
 
@@ -25,12 +26,12 @@ int main(void) {
         DrawLine(590, 0, 590, GetScreenHeight(), Fade(LIGHTGRAY, 0.6f));
         DrawRectangle(590, 0, GetScreenWidth() - 500, GetScreenHeight(), Fade(DARKGRAY, 0.3f));
         DrawLine(0, 400, 590, 400, WHITE);
-        DrawLine(100, 400, 400, startAngle, GREEN);
-        DrawCircle(100, 400, 15.0, RED);
+        DrawLine(100, height, 400, startAngle, GREEN);
+        DrawCircle(100, height, 15.0, RED);
 
         startAngle = GuiSliderBar((Rectangle){ 700, 40, 130, 20 }, "Angle", NULL, startAngle, 0, 400);
-        GuiSliderBar((Rectangle){ 700, 70, 130, 20 }, "Height", NULL, 100, -400, 400);
-        GuiSliderBar((Rectangle){ 700, 100, 130, 20 }, "Initial Speed", NULL, 0, -400, 400);
+        height = GuiSliderBar((Rectangle){ 700, 70, 130, 20 }, "Height", NULL, height, 300, 400);
+        speed = GuiSliderBar((Rectangle){ 700, 100, 130, 20 }, "Initial Speed", NULL, speed, 0, 400);
 
         if (GuiButton( (Rectangle){ 700, 200, 130, 40 }, "Launch" )) {
             printf("yooo!\n");
