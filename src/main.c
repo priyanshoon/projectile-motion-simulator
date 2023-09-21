@@ -37,6 +37,14 @@ int main(void) {
             printf("yooo!\n");
         }
 
+        if ( GuiButton((Rectangle){700, 250, 130, 40}, "Restart") ) {
+            printf("Restart\n");
+        }
+
+        if ( GuiButton((Rectangle){700, 300, 130, 40}, "Quit") ) {
+            exit(1);
+        }
+
         DrawFPS(10, 10);
         EndDrawing();
     }
